@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="parentAttribute1" type="String" default="ABC"/>
+    <aura:attribute name="parentAttribute2" type="String" default="BDF"/>
+    
+    <c:childComponentWithMethod aura:id="child"/>
+    
+    <lightning:button label="Call child method" onclick="{! c.callChildMethod }" />
+</aura:component>

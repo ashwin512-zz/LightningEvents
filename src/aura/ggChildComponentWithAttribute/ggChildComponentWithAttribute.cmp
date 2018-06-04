@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="ggchildAttribute" type="String[]"/>
+    <aura:handler name="change" value="{!v.ggchildAttribute}" action="{!c.onggChildAttributeChange}"/>
+    <div>
+        <h1>Grand Grand Child</h1>
+        <aura:iteration var="num" items="{!v.ggchildAttribute}"> {!num} </aura:iteration>
+    </div>
+    <br/>
+    <br/>
+    <lightning:button onclick="{!c.gghandleChildClick}">Grand Grand Child Click Me</lightning:button>
+</aura:component>

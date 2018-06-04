@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="message" type="String" default=""/>
+    <div class="ashwin"> this is the text</div>
+    <lightning:button variant="brand" label="Click Me" onclick="{!c.accessComponent}"/>
+    <p>{!v.message}</p>
+</aura:component>

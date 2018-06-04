@@ -1,0 +1,36 @@
+<aura:component >
+    <aura:handler name="evCmp" event="c:ETLC_EV_ComponentEvent" action="{!c.evAction}" />
+    <aura:handler event="c:ETLC_EV_ApplicationEvent" action="{!c.evAction}" />
+    
+    <div>
+        <div class="padded" style="background-color: #2F5597;">
+            <div style="color:#F0F0F0">Bottom Row</div>
+            <table style="height:100%">
+                <tr>
+                    <td style="width:25%;">
+                        <table style="height:100%">
+                            <tr><td class="bordered labeled" style="background-color: white;">
+                                <c:ETLC_EV_WhiteBox label="5" />
+                                </td></tr>
+                            <tr><td class="bordered labeled" style="background-color: white;">
+                                <c:ETLC_EV_WhiteBox label="6" />
+                                </td></tr>
+                        </table>
+                    </td>
+                    <td style="width:25%">
+                        <table style="height:100%">
+                            <tr><td class="bordered labeled" style="background-color: white;">
+                                <c:ETLC_EV_WhiteBox label="7" />
+                                </td></tr>
+                            <tr><td class="bordered labeled" style="background-color: white;">
+                                <c:ETLC_EV_WhiteBox label="8" />
+                                </td></tr>
+                        </table>
+                    </td>
+                    <!-- Light Blue -->
+                    <c:ETLC_EV_LightBlue />
+                </tr>
+            </table>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    
+    <aura:method name="myMethod" action="{!c.executeMyMethod}">
+        <aura:attribute name="param1" type="String" default="child param 1"/>
+        <aura:attribute name="param2" type="String" default="child param 2"/>
+    </aura:method>
+    <c:GrandChildComponentWithMethod aura:id="grandchild"/>
+</aura:component>

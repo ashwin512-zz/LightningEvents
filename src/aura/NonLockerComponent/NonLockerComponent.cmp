@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <lightning:button onclick="{!c.handleNonLockerButton}">non-Locker Window</lightning:button>
+</aura:component>

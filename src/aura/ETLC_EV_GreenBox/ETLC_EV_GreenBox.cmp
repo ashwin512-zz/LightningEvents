@@ -1,0 +1,38 @@
+<aura:component >
+    <aura:attribute name="callbackMethodName" type="Aura.Action" default="{!c.defaultAction}" />
+    <aura:registerEvent name="evCmp" type="c:ETLC_EV_ComponentEvent" />
+    <aura:registerEvent name="evApp" type="c:ETLC_EV_ApplicationEvent" />
+    
+    <div>
+        <div class="padded">
+            Green<br/>
+            <ui:button label="Fire events" press="{!c.fireEvents}" />
+            <ui:button label="Callback" press="{!v.callbackMethodName}" />
+        </div>
+        <table >
+            <tr>
+                <td style="background-color: white">
+                    <div class="padded">11</div>
+                    <table>
+                        <tr>
+                            <td class="bordered labeled">
+                                <c:ETLC_EV_WhiteBox label="12" />
+                            </td>
+                            <td class="bordered labeled">
+                                <c:ETLC_EV_WhiteBox label="13" />
+                            </td>
+                            <td class="bordered labeled">
+                                <c:ETLC_EV_WhiteBox label="14" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #FF6FCF" class="bordered padded">
+                    <c:ETLC_EV_PinkBox aura:Id="pinkBox" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</aura:component>

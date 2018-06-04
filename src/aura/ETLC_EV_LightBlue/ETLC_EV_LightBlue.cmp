@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:handler name="evCmp" event="c:ETLC_EV_ComponentEvent" action="{!c.evAction}" />
+    <aura:handler event="c:ETLC_EV_ApplicationEvent" action="{!c.evAction}" />
+    
+    <td style="width:50%; background-color: #8FAADC; vertical-align: top">
+        <div class="padded">Light Blue</div>
+        <table>
+            <tr>
+                <td class="bordered labeled" style="width:25%; background-color: white;">
+                    <c:ETLC_EV_WhiteBox label="9" />
+                </td>
+                <td class="bordered labeled" style="width:25%; background-color: white;">
+                    <c:ETLC_EV_WhiteBox label="10" />
+                </td>
+                <td style="width:50%; background-color: #70AD47" class="">
+                    <!-- Green Box -->
+                    <c:ETLC_EV_GreenBox callbackMethodName="{!c.callbackMethod}" />
+                </td>
+            </tr>
+        </table>
+    </td>
+</aura:component>

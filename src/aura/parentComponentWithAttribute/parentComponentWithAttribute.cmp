@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="parentAttribute" type="String[]" default="['red','green','yellow']"/>
+    <aura:handler name="change" value="{!v.parentAttribute}" action="{!c.onParentAttributeChange}"/>
+    <div>
+        <h1>Parent</h1>
+        <aura:iteration var="num" items="{!v.parentAttribute}"> {!num} </aura:iteration>
+    </div>
+    <br/>
+    <br/>
+    <c:childComponentWithAttribute childAttribute="{!v.parentAttribute}"/>
+    
+    <lightning:button onclick="{!c.handleParentClick}">Click Me</lightning:button>
+</aura:component>

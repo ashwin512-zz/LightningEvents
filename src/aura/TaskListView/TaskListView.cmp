@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="TaskController">
+    <aura:attribute name="taskdata" type="Object"/>
+	<aura:attribute name="taskcolumns" type="List"/>
+    <aura:attribute name="onloadselectedrows" type="List"/>
+    <aura:attribute name="enableInfiniteLoading" type="Boolean" default="true"/>
+    <aura:attribute name="initialRows" type="Integer" default="10"/>
+    <aura:attribute name="rowsToLoad" type="Integer" default="10"/>
+    <aura:attribute name="totalNumberOfRows" type="Integer" default="4000"/>
+    <aura:attribute name="loadMoreStatus" type="String" default=""/>
+   
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:datatable data="{!v.taskdata}" aura:id="partnerTable"
+        columns="{!v.taskcolumns}" keyField="Id" selectedRows="{!v.onloadselectedrows}" 
+        onrowselection="{!c.getSelectedTask}"/>
+    {!v.loadMoreStatus}
+</aura:component>

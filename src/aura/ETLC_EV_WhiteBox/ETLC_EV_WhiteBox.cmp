@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:handler name="evCmp" event="c:ETLC_EV_ComponentEvent" action="{!c.evAction}" />
+    <aura:handler event="c:ETLC_EV_ApplicationEvent" action="{!c.evAction}" />
+    
+    <aura:attribute name="label" type="String" default="Not Set" />
+    <div>
+    	{!v.label}
+    </div>
+</aura:component>
