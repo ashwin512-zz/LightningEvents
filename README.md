@@ -1,5 +1,5 @@
 # LightningEvents
-#dev1 branch changes
+#dev1 ashwin branch changes
 #Need Java and Ant to run the build
 Check out the branch and go to build folder.
 update username and password in the build.properties file
